@@ -206,92 +206,325 @@
         <section class="section experience-section" id="experience">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-badge">Career History</span>
+                    <span class="section-badge">Career Comparison & Roles</span>
                     <h2 class="section-title">Work Experience</h2>
-                    <p class="section-subtitle">A track record of managing operations, administration, and executive coordination.</p>
+                    <p class="section-subtitle">Side-by-side comparative view of corporate roles, responsibilities, and measurable impact.</p>
                     <div class="divider"></div>
-                </div>
 
-                <div class="timeline">
-                    <!-- Job 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="job-title">Administrative Officer</h3>
-                                    <h4 class="company-name">Tapal Tea</h4>
-                                </div>
-                                <div class="job-meta">
-                                    <span class="badge-date">Dec 2023 – Present</span>
-                                    <span class="badge-location">Karachi, Pakistan</span>
-                                </div>
-                            </div>
-                            <ul class="job-details">
-                                <li>Managed and executed comprehensive office administration policies to ensure smooth daily corporate operations.</li>
-                                <li>Maintained workplace discipline and cultivated a professional environment supporting staff productivity and morale.</li>
-                                <li>Ensured employee security, safety, and well-being while efficiently managing crisis and emergency protocols.</li>
-                                <li>Supervised janitorial and security teams to maintain high standards of cleanliness, security, and facility efficiency.</li>
-                                <li>Coordinated with vendors, obtained competitive quotations, and optimized procurement processes to <strong>reduce costs by 10–15%</strong>.</li>
-                                <li>Monitored and managed office supplies inventory through systematic vendor tracking and auditing.</li>
-                                <li>Organized and facilitated corporate and board meetings, managing scheduling, hospitality, logistics, and executive documentation.</li>
-                                <li>Utilized Microsoft Office Suite and CRM software to enhance administrative efficiency and reporting precision.</li>
-                                <li>Served as liaison across multi-functional departments for business facilitation.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Job 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="job-title">Guest Relation Officer</h3>
-                                    <h4 class="company-name">Corporate Office Block, Dolmen</h4>
-                                </div>
-                                <div class="job-meta">
-                                    <span class="badge-date">Mar 2022 – Sep 2023</span>
-                                    <span class="badge-location">Karachi, Pakistan</span>
-                                </div>
-                            </div>
-                            <ul class="job-details">
-                                <li>Acted as the primary liaison for tenant representatives, swiftly addressing facility concerns and service requests.</li>
-                                <li>Maintained updated tenant contact directories and coordinated with building management for maintenance, safety, and compliance.</li>
-                                <li>Handled guest and tenant feedback with high emotional intelligence, ensuring timely resolution and continuous service enhancement.</li>
-                                <li>Supported daily administrative operations including courier handling, PBX call routing, and reception desk management.</li>
-                                <li>Prepared and maintained visitor log reports and guest login summaries using <strong>Dolmen Software</strong> for accurate access tracking.</li>
-                                <li>Generated AC temperature monitoring reports and compiled maintenance activity logs for facility performance audits.</li>
-                                <li>Produced speed gate access data reports for staff and visitors, maintaining airtight security records.</li>
-                                <li>Maintained presentation readiness of reception areas, VIP lounges, and meeting rooms with full AV and refreshment setup.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Job 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="job-title">Operations Officer</h3>
-                                    <h4 class="company-name">Sky Tower Dolmen</h4>
-                                </div>
-                                <div class="job-meta">
-                                    <span class="badge-date">Mar 2022 – Sep 2023</span>
-                                    <span class="badge-location">Karachi, Pakistan</span>
-                                </div>
-                            </div>
-                            <ul class="job-details">
-                                <li>Monitored day-to-day operations and reported key performance metrics to identify and implement actionable improvements.</li>
-                                <li>Ordered office supplies and managed stock inventory in coordination with accounting and finance teams to maintain strict budget compliance.</li>
-                                <li>Developed and distributed operational procedures and checklists to ensure process consistency across staff activities.</li>
-                                <li>Communicated and coordinated with executive operations teams and external vendors for seamless workflow.</li>
-                                <li>On-boarded and trained new team members, ensuring strict adherence to company policies and operational standards.</li>
-                            </ul>
-                        </div>
+                    <!-- Experience View Switcher Tabs -->
+                    <div class="experience-tabs" role="tablist" aria-label="Experience view options">
+                        <button class="exp-tab-btn active" data-target="compare-cards" role="tab" aria-selected="true">
+                            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="18" rx="1"></rect>
+                                <rect x="14" y="3" width="7" height="18" rx="1"></rect>
+                            </svg>
+                            Side-by-Side Comparison
+                        </button>
+                        <button class="exp-tab-btn" data-target="compare-table" role="tab" aria-selected="false">
+                            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18"></path>
+                            </svg>
+                            Role Comparison Matrix
+                        </button>
+                        <button class="exp-tab-btn" data-target="timeline-view" role="tab" aria-selected="false">
+                            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Timeline View
+                        </button>
                     </div>
                 </div>
+
+                <!-- VIEW 1: Side-by-Side Comparative Cards (Active by default) -->
+                <div class="exp-view-panel active" id="compare-cards">
+                    <div class="comparison-grid">
+                        
+                        <!-- Role 1: Tapal Tea -->
+                        <div class="compare-card highlight-card-blue">
+                            <div class="compare-card-header">
+                                <div class="org-badge current-badge">Current Role</div>
+                                <h3 class="role-title">Administrative Officer</h3>
+                                <h4 class="company-name">Tapal Tea</h4>
+                                <div class="role-duration">
+                                    <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>Dec 2023 – Present &bull; Karachi</span>
+                                </div>
+                            </div>
+
+                            <div class="impact-banner">
+                                <span class="impact-label">Key Impact</span>
+                                <span class="impact-value">10–15% Procurement Cost Reduction</span>
+                            </div>
+
+                            <div class="compare-body">
+                                <div class="compare-section-title">Primary Focus & Scope</div>
+                                <p class="compare-summary">
+                                    Corporate governance, vendor procurement optimization, crisis management, board meeting facilitation, and overall administrative oversight.
+                                </p>
+
+                                <div class="compare-section-title">Key Responsibilities</div>
+                                <ul class="compare-list">
+                                    <li>Managed and executed corporate office policies ensuring workplace discipline and high staff morale.</li>
+                                    <li>Supervised multi-member security and janitorial teams for facility maintenance and safety.</li>
+                                    <li>Negotiated vendor contracts, quotations, and systematic inventory control.</li>
+                                    <li>Facilitated board and executive meetings including VIP logistics and documentation.</li>
+                                    <li>Cross-departmental liaison for seamless business facilitation.</li>
+                                </ul>
+
+                                <div class="compare-tools">
+                                    <span class="tool-tag">MS Office Suite</span>
+                                    <span class="tool-tag">CRM Systems</span>
+                                    <span class="tool-tag">Vendor Auditing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Role 2: Dolmen Group - Guest Relations -->
+                        <div class="compare-card highlight-card-teal">
+                            <div class="compare-card-header">
+                                <div class="org-badge dolmen-badge">Dolmen Group</div>
+                                <h3 class="role-title">Guest Relation Officer</h3>
+                                <h4 class="company-name">Corporate Office Block Dolmen</h4>
+                                <div class="role-duration">
+                                    <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>Mar 2022 – Sep 2023 &bull; Karachi</span>
+                                </div>
+                            </div>
+
+                            <div class="impact-banner">
+                                <span class="impact-label">Key Impact</span>
+                                <span class="impact-value">Live Dolmen Data Tracking & Audit Readiness</span>
+                            </div>
+
+                            <div class="compare-body">
+                                <div class="compare-section-title">Primary Focus & Scope</div>
+                                <p class="compare-summary">
+                                    Tenant liaison, executive hospitality, real-time access security reports, PBX communication, and compliance log generation.
+                                </p>
+
+                                <div class="compare-section-title">Key Responsibilities</div>
+                                <ul class="compare-list">
+                                    <li>Served as primary contact for corporate tenants, resolving facility requests and feedback promptly.</li>
+                                    <li>Tracked visitor access logs and executive summaries using Dolmen Software.</li>
+                                    <li>Generated AC temperature monitoring reports and compiled maintenance activity audits.</li>
+                                    <li>Produced speed gate access data for staff and guests to uphold security standards.</li>
+                                    <li>Maintained executive meeting rooms with complete AV setup and refreshments.</li>
+                                </ul>
+
+                                <div class="compare-tools">
+                                    <span class="tool-tag">Dolmen Software</span>
+                                    <span class="tool-tag">Speed Gate Systems</span>
+                                    <span class="tool-tag">Tenant CRM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Role 3: Sky Tower Dolmen - Operations -->
+                        <div class="compare-card highlight-card-indigo">
+                            <div class="compare-card-header">
+                                <div class="org-badge dolmen-badge">Dolmen Group</div>
+                                <h3 class="role-title">Operations Officer</h3>
+                                <h4 class="company-name">Sky Tower Dolmen</h4>
+                                <div class="role-duration">
+                                    <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    <span>Mar 2022 – Sep 2023 &bull; Karachi</span>
+                                </div>
+                            </div>
+
+                            <div class="impact-banner">
+                                <span class="impact-label">Key Impact</span>
+                                <span class="impact-value">SOP Standardization & Budget Compliance</span>
+                            </div>
+
+                            <div class="compare-body">
+                                <div class="compare-section-title">Primary Focus & Scope</div>
+                                <p class="compare-summary">
+                                    Operational workflow consistency, staff onboarding, budget compliance with finance, and vendor service execution (fumigation, aquarium, Davam).
+                                </p>
+
+                                <div class="compare-section-title">Key Responsibilities</div>
+                                <ul class="compare-list">
+                                    <li>Monitored daily operations and reported KPI metrics to implement actionable workflows.</li>
+                                    <li>Coordinated with accounting and finance teams for budget-compliant supply procurement.</li>
+                                    <li>Authored and implemented operational procedures and daily checklist standards.</li>
+                                    <li>On-boarded and trained new staff in company policies and operational guidelines.</li>
+                                    <li>Supervised specialized facility operations including fumigation and branding.</li>
+                                </ul>
+
+                                <div class="compare-tools">
+                                    <span class="tool-tag">SOP Frameworks</span>
+                                    <span class="tool-tag">Budget Tracking</span>
+                                    <span class="tool-tag">Staff Training</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- VIEW 2: Role Comparison Matrix Table -->
+                <div class="exp-view-panel" id="compare-table">
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-criteria">Comparison Factor</th>
+                                    <th class="col-role">
+                                        <span class="t-role">Administrative Officer</span>
+                                        <span class="t-company">Tapal Tea</span>
+                                        <span class="t-date">Dec 2023 – Present</span>
+                                    </th>
+                                    <th class="col-role">
+                                        <span class="t-role">Guest Relation Officer</span>
+                                        <span class="t-company">Dolmen Corporate Office</span>
+                                        <span class="t-date">Mar 2022 – Sep 2023</span>
+                                    </th>
+                                    <th class="col-role">
+                                        <span class="t-role">Operations Officer</span>
+                                        <span class="t-company">Sky Tower Dolmen</span>
+                                        <span class="t-date">Mar 2022 – Sep 2023</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="criteria-name">Core Focus</td>
+                                    <td>Company-wide administration, security, policy execution & procurement.</td>
+                                    <td>Front-desk operations, tenant relations, and visitor access control.</td>
+                                    <td>Facility operations, SOP development, onboarding, and workflow control.</td>
+                                </tr>
+                                <tr>
+                                    <td class="criteria-name">Measurable Impact</td>
+                                    <td><strong class="highlight-text">Reduced procurement costs by 10–15%</strong> through structured vendor bidding.</td>
+                                    <td><strong class="highlight-text">100% accurate tracking</strong> via Dolmen software reports & AC monitoring audits.</td>
+                                    <td><strong class="highlight-text">Standardized operational checklists</strong> and seamless budget compliance with finance.</td>
+                                </tr>
+                                <tr>
+                                    <td class="criteria-name">Key Stakeholders</td>
+                                    <td>Executive Board, Department Heads, Security & Janitorial teams, External Vendors.</td>
+                                    <td>Corporate Tenants, VIP Guests, Building Engineers, Facility Management.</td>
+                                    <td>Operations Staff, Finance/Accounting teams, Service Contractors, New Hires.</td>
+                                </tr>
+                                <tr>
+                                    <td class="criteria-name">Key Responsibilities</td>
+                                    <td>
+                                        <ul>
+                                            <li>Workplace discipline & safety</li>
+                                            <li>Board meeting logistics</li>
+                                            <li>Inventory management</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Tenant request resolution</li>
+                                            <li>Speed gate access records</li>
+                                            <li>Reception & AV readiness</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Procedure & checklist design</li>
+                                            <li>Staff training & onboarding</li>
+                                            <li>Fumigation & facility care</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="criteria-name">Tools & Software</td>
+                                    <td>MS Office Suite, CRM Software, Procurement Tracking</td>
+                                    <td>Dolmen Software, Speed Gate Systems, PBX Call Handling</td>
+                                    <td>Operational Checklists, Financial Budget Sheets, Inventory Tools</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- VIEW 3: Detailed Timeline View -->
+                <div class="exp-view-panel" id="timeline-view">
+                    <div class="timeline">
+                        <!-- Job 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3 class="job-title">Administrative Officer</h3>
+                                        <h4 class="company-name">Tapal Tea</h4>
+                                    </div>
+                                    <div class="job-meta">
+                                        <span class="badge-date">Dec 2023 – Present</span>
+                                        <span class="badge-location">Karachi, Pakistan</span>
+                                    </div>
+                                </div>
+                                <ul class="job-details">
+                                    <li>Managed and executed comprehensive office administration policies to ensure smooth daily corporate operations.</li>
+                                    <li>Maintained workplace discipline and cultivated a professional environment supporting staff productivity and morale.</li>
+                                    <li>Ensured employee security, safety, and well-being while efficiently managing crisis and emergency protocols.</li>
+                                    <li>Supervised janitorial and security teams to maintain high standards of cleanliness, security, and facility efficiency.</li>
+                                    <li>Coordinated with vendors, obtained competitive quotations, and optimized procurement processes to <strong>reduce costs by 10–15%</strong>.</li>
+                                    <li>Monitored and managed office supplies inventory through systematic vendor tracking and auditing.</li>
+                                    <li>Organized and facilitated corporate and board meetings, managing scheduling, hospitality, logistics, and executive documentation.</li>
+                                    <li>Utilized Microsoft Office Suite and CRM software to enhance administrative efficiency and reporting precision.</li>
+                                    <li>Served as liaison across multi-functional departments for business facilitation.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3 class="job-title">Guest Relation Officer</h3>
+                                        <h4 class="company-name">Corporate Office Block, Dolmen</h4>
+                                    </div>
+                                    <div class="job-meta">
+                                        <span class="badge-date">Mar 2022 – Sep 2023</span>
+                                        <span class="badge-location">Karachi, Pakistan</span>
+                                    </div>
+                                </div>
+                                <ul class="job-details">
+                                    <li>Acted as the primary liaison for tenant representatives, swiftly addressing facility concerns and service requests.</li>
+                                    <li>Maintained updated tenant contact directories and coordinated with building management for maintenance, safety, and compliance.</li>
+                                    <li>Handled guest and tenant feedback with high emotional intelligence, ensuring timely resolution and continuous service enhancement.</li>
+                                    <li>Supported daily administrative operations including courier handling, PBX call routing, and reception desk management.</li>
+                                    <li>Prepared and maintained visitor log reports and guest login summaries using <strong>Dolmen Software</strong> for accurate access tracking.</li>
+                                    <li>Generated AC temperature monitoring reports and compiled maintenance activity logs for facility performance audits.</li>
+                                    <li>Produced speed gate access data reports for staff and visitors, maintaining airtight security records.</li>
+                                    <li>Maintained presentation readiness of reception areas, VIP lounges, and meeting rooms with full AV and refreshment setup.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3 class="job-title">Operations Officer</h3>
+                                        <h4 class="company-name">Sky Tower Dolmen</h4>
+                                    </div>
+                                    <div class="job-meta">
+                                        <span class="badge-date">Mar 2022 – Sep 2023</span>
+                                        <span class="badge-location">Karachi, Pakistan</span>
+                                    </div>
+                                </div>
+                                <ul class="job-details">
+                                    <li>Monitored day-to-day operations and reported key performance metrics to identify and implement actionable improvements.</li>
+                                    <li>Ordered office supplies and managed stock inventory in coordination with accounting and finance teams to maintain strict budget compliance.</li>
+                                    <li>Developed and distributed operational procedures and checklists to ensure process consistency across staff activities.</li>
+                                    <li>Communicated and coordinated with executive operations teams and external vendors for seamless workflow.</li>
+                                    <li>On-boarded and trained new team members, ensuring strict adherence to company policies and operational standards.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

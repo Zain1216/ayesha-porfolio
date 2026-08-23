@@ -88,7 +88,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 6. Interactive Contact Form Submission Handler
+    // 6. Experience View Tabs (Comparative vs Matrix vs Timeline)
+    // ----------------------------------------------------------------------
+    const expTabBtns = document.querySelectorAll('.exp-tab-btn');
+    const expViewPanels = document.querySelectorAll('.exp-view-panel');
+
+    if (expTabBtns.length > 0 && expViewPanels.length > 0) {
+        expTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+
+                // Update active tab button
+                expTabBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+
+                // Show corresponding view panel
+                expViewPanels.forEach(panel => {
+                    if (panel.id === targetId) {
+                        panel.classList.add('active');
+                    } else {
+                        panel.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
+
+    // ----------------------------------------------------------------------
+    // 7. Interactive Contact Form Submission Handler
     // ----------------------------------------------------------------------
     if (contactForm && formStatus) {
         contactForm.addEventListener('submit', (e) => {
