@@ -530,18 +530,18 @@ button, input, textarea {
 }
 
 .about-card.main-bio h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--primary-dark);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     line-height: 1.35;
 }
 
 .about-card.main-bio p {
     color: var(--text-muted);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.7;
+    margin-bottom: 0.85rem;
+    font-size: 0.925rem;
+    line-height: 1.65;
 }
 
 .about-card.main-bio p:last-child {
@@ -549,45 +549,62 @@ button, input, textarea {
 }
 
 .about-stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .stat-card {
     background-color: var(--bg-card);
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
 }
 
 .stat-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
     border-color: var(--primary-light);
 }
 
 .stat-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: var(--radius-md);
+    background-color: var(--primary-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-info {
+    flex: 1;
+    min-width: 0;
 }
 
 .stat-info h4 {
-    font-size: 1rem;
+    font-size: 1.025rem;
     font-weight: 700;
     color: var(--text-main);
     margin-bottom: 0.25rem;
 }
 
 .stat-info p {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
-    line-height: 1.4;
+    line-height: 1.45;
+    margin: 0;
 }
 
 /* Languages Box */
@@ -1547,6 +1564,12 @@ button, input, textarea {
 
     .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
     }
 
     .comparison-grid {
